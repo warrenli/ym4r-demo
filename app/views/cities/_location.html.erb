@@ -1,0 +1,18 @@
+<% fields_for "city[locations_attributes][]", location do |f| %>
+  <% if f.object.new_record? %>
+  <div class="location_new">
+  <ul>
+  <li>
+    <%= f.label :name, 'Location Name' %>
+    <%= f.text_field :name %>
+  </li>
+  <li>
+    <%= f.label :street %>
+    <%= f.text_field :street %>
+  </li>
+  </ul>
+  </div>
+  <% end %>
+<% end %>
+
+

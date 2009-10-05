@@ -1,0 +1,13 @@
+<% title "Cities" %>
+
+<% form_for @city do |f| %>
+  <div id = "form">
+  <%= f.error_messages %>
+  <%= f.label :name, 'City Name:' %>
+  <%= f.text_field :name %>
+  <%= f.submit "Add City" %>
+  </div>
+<% end %>
+
+<%= @map.div(:width => 750, :height => 500) %>
+

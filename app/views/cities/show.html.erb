@@ -1,0 +1,28 @@
+<% title @city.name %>
+
+<p>
+  <strong>Latitude:</strong>
+  <%=h @city.latitude %>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Longitude:</strong>
+  <%=h @city.longitude %>
+</p>
+
+<% form_for @city do |f| %>
+  <div id = "form">
+  <%= f.error_messages %>
+  <%# = f.label :name %>
+  <%# = f.text_field :name, :readonly => true %>
+  <div id="locations">
+  <%= render :partial=> 'location', :collection=> @city.locations %>
+  </div>
+  <%= f.submit "Add Location" %>
+  </div>
+<% end %>
+
+<%= @map.div(:width => 750, :height => 500) %>
+
+<p>
+  <%= link_to "Destroy", @city, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Home", root_path %>
+</p>
