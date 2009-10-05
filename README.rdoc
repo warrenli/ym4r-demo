@@ -1,0 +1,11 @@
+= Rails Demo Application
+
+A simple Google Map example using YM4R gem and plugin git://github.com/ewildgoose/ym4r_gm.git
+
+
+= Usage:
+
+* User enters name of a city, the system marks it on the map
+
+* User enters street of a location in particular city, the system marks it on the map
+
