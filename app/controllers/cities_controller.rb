@@ -26,6 +26,7 @@ class CitiesController < ApplicationController
       flash[:notice] = "Successfully updated city."
       redirect_to @city
     else
+      set_city_map(@city)
       render :action => 'show'
     end
   end

@@ -5,8 +5,7 @@ class City < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false
   validates_presence_of :name
 
-  accepts_nested_attributes_for :locations, :allow_destroy => true,
-        :reject_if => proc { |attributes| attributes['name'].blank? }
+  accepts_nested_attributes_for :locations
   attr_accessible :locations_attributes
 
   def latlon
